@@ -29,29 +29,3 @@
 
 
 
-<!-- Ma structure est la suivante:
-
-build
-lib
-src 
-    main
-        java
-        app
-            main.java
-        model
-            Employe.java
-        repository
-            EmployeRepository.java
-        service
-            EmployeService.java
-        util
-            UtilDb.java
-        controller
-            EmployeController.java
-        webapp 
-            WEB-INF 
-                views
-                    employe.jsp
-                applicationContext.xml
-                dispatcher-servlet.xml
-                web.xml  -->
