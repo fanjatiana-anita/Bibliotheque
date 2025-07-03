@@ -7,10 +7,11 @@
 </head>
 
 <body>
-    <h1>FILM-CATEGORIE</h1>
+    <h1>BIBLIOTHEQUE</h1>
 </body>
-<p><strong><a href="film">Voir la liste des films</a></strong></p>
-<!-- <p><strong><a href="departement">Voir la liste des departements</a></strong></p> -->
+<p><strong><a href="inscription">S'inscrire</a></strong></p>
+<p><strong><a href="login">Login</a></strong></p>
+<p><strong><a href="admin">Admin</a></strong></p>
 
 
 </html>
