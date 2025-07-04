@@ -1,4 +1,5 @@
-
+CREATE DATABASE bibliotheque_mvc;
+\c bibliotheque_mvc
 -- =========================
 -- ENUMS nécessaires
 -- =========================
@@ -40,7 +41,8 @@ CREATE TABLE Profil (
     quotaMax INTEGER,
     quotaProlongement INTEGER,
     quotaReservation INTEGER,
-    dureePenalite INTEGER
+    dureePenalite INTEGER,
+    dureeMaxPret INTEGER
 );
 
 -- Adherent
@@ -167,3 +169,58 @@ CREATE TABLE JourNonOuvrable (
     dateFerie DATE,
     description VARCHAR(150)
 );
+
+INSERT INTO Personne (nomPersonne, dateDeNaissance, sexe, adresse) VALUES
+('Jean Rasoanaivo', '1995-06-12', 'Homme', 'Lot II Analakely'),
+('Marie Rakoto', '2002-04-18', 'Femme', 'Ambanidia'),
+('Pauline Andrianarisoa', '1985-01-10', 'Femme', 'Ivandry'),
+('Hery Ramaroson', '1990-09-22', 'Homme', 'Ambohipo');
+
+INSERT INTO UserAccount (idPersonne, login, motDePasse, role, estActif) VALUES
+(1, 'adherant', 'adherant', 'ADHERENT', true),
+(2, 'marie2002', 'motdepasse', 'ADHERENT', true),
+(3, 'admin', 'admin', 'BIBLIOTHECAIRE', true),
+(4, 'heryBib', 'biblio2025', 'BIBLIOTHECAIRE', true);
+
+INSERT INTO Profil (profil, montantCotisation, quotaMax, quotaProlongement, quotaReservation, dureePenalite, dureeMaxPret) VALUES
+('Étudiant', 5000, 3, 2, 2, 5, 7),
+('Professionnel', 10000, 5, 3, 3, 3, 10),
+('Professeur', 15000, 7, 4, 4, 2, 15);
+
+INSERT INTO Adherent (idUserAccount, idProfil) VALUES
+(1, 1),
+(2, 2);
+
+INSERT INTO Bibliothecaire (idUserAccount) VALUES
+(3),
+(4);
+
+INSERT INTO Abonnement (idAdherent, dateDebut, dateFin) VALUES
+(1, '2025-01-01', '2025-12-31'),
+(2, '2025-02-01', '2025-10-31');
+
+INSERT INTO Auteur (idPersonne) VALUES
+(1),
+(2);
+
+INSERT INTO Theme (theme) VALUES
+('Science Fiction'),
+('Philosophie'),
+('Informatique');
+
+INSERT INTO Livre (titreLivre, idAuteur) VALUES
+('Les robots rêvent-ils ?', 1),
+('La logique de l’esprit', 2);
+
+INSERT INTO Theme_Livre (idTheme, idLivre) VALUES
+(1, 1),
+(2, 2);
+
+INSERT INTO Exemplaire (idLivre, statutExemplaire) VALUES
+(1, 'DISPONIBLE'),
+(1, 'RESERVE'),
+(2, 'EN_PRET');
+
+INSERT INTO RestrictionProfilLivre (idLivre, ageMinRequis, idProfil) VALUES
+(1, 18, 1),
+(2, 25, 2);

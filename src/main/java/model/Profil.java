@@ -22,6 +22,7 @@ public class Profil {
     private Integer quotaReservation;
 
     private Integer dureePenalite;
+    private Integer dureeMaxPret;
 
 
     public Integer getIdProfil() {
@@ -78,5 +79,12 @@ public class Profil {
 
     public void setDureePenalite(Integer dureePenalite) {
         this.dureePenalite = dureePenalite;
+    }
+        public Integer getDureeMaxPret() {
+        return dureeMaxPret;
+    }
+
+    public void setDureeMaxPret(Integer dureeMaxPret) {
+        this.dureeMaxPret = dureeMaxPret;
     }
 }
