@@ -11,7 +11,6 @@
 </body>
 <p><strong><a href="inscription">S'inscrire</a></strong></p>
 <p><strong><a href="login">Login</a></strong></p>
-<p><strong><a href="admin">Admin</a></strong></p>
 
 
 </html>

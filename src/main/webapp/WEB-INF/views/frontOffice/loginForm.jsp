@@ -6,11 +6,11 @@
 </head>
 <body>
     <h2>Authentification</h2>
-    <form action="${pageContext.request.contextPath}/doLogin" method="post">
-        <label for="pseudo">Pseudo:</label>
-        <input type="text" id="pseudo" name="pseudo">
-        <label for="pwd">Mot de passe:</label>
-        <input type="text" id="pwd" name="pwd">
+    <form action="${pageContext.request.contextPath}/login" method="post">
+        <label for="login">Pseudo:</label>
+        <input type="text" id="login" name="login" required>
+        <label for="motDePasse">Mot de passe:</label>
+        <input type="text" id="motDePasse" name="motDePasse" required>
         <input type="submit" value="S'authentifier">
     </form>
 </body>
