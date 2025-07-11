@@ -1,0 +1,29 @@
+src/main/java/repository/ExemplaireRepository.java:9: error: cannot find symbol
+    List<Exemplaire> findByLivreIdLivreAndStatutExemplaire(Integer idLivre, Exemplaire.StatutExemplaire statutExemplaire);
+                                                                                      ^
+  symbol:   class StatutExemplaire
+  location: class Exemplaire
+src/main/java/controller/InscriptionController.java:12: error: package util does not exist
+import util.PasswordGenerator;
+           ^
+src/main/java/service/ReservationService.java:41: error: cannot find symbol
+        if (exemplaire.getStatutExemplaire() != Exemplaire.StatutExemplaire.DISPONIBLE) {
+                                                          ^
+  symbol:   variable StatutExemplaire
+  location: class Exemplaire
+src/main/java/service/ReservationService.java:64: error: cannot find symbol
+        List<Exemplaire> availableExemplaires = exemplaireRepository.findByLivreIdLivreAndStatutExemplaire(exemplaire.getLivre().getIdLivre(), Exemplaire.StatutExemplaire.DISPONIBLE);
+                                                                                                                                                         ^
+  symbol:   variable StatutExemplaire
+  location: class Exemplaire
+src/main/java/service/ReservationService.java:82: error: cannot find symbol
+        return exemplaireRepository.findByLivreIdLivreAndStatutExemplaire(idLivre, Exemplaire.StatutExemplaire.DISPONIBLE);
+                                                                                             ^
+  symbol:   variable StatutExemplaire
+  location: class Exemplaire
+src/main/java/controller/InscriptionController.java:48: error: cannot find symbol
+            String motDePasseGenere = PasswordGenerator.generate(8);
+                                      ^
+  symbol:   variable PasswordGenerator
+  location: class InscriptionController
+6 errors

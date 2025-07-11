@@ -1,0 +1,6 @@
+-parameters
+-cp
+:lib/antlr4-runtime-4.13.1.jar:lib/byte-buddy-1.14.11(1).jar:lib/hibernate-commons-annotations-6.0.6.Final.jar:lib/hibernate-core-6.4.4.Final.jar:lib/jakarta.persistence-api-3.1.0.jar:lib/jakarta.servlet-api-5.0.0.jar:lib/jakarta.servlet.jsp.jstl-3.0.0.jar:lib/jakarta.servlet.jsp.jstl-api-3.0.0.jar:lib/jboss-logging-3.4.3.Final.jar:lib/postgresql-42.7.3.jar:lib/spring-aop-6.1.5.jar:lib/spring-beans-6.1.5.jar:lib/spring-context-6.1.5.jar:lib/spring-core-6.1.5.jar:lib/spring-data-commons-3.2.5.jar:lib/spring-data-jpa-3.2.5.jar:lib/spring-expression-6.1.5.jar:lib/spring-jdbc-6.1.5.jar:lib/spring-orm-6.1.5.jar:lib/spring-tx-6.1.5.jar:lib/spring-web-6.1.5.jar:lib/spring-webmvc-6.1.5.jar
+-d
+build/WEB-INF/classes
+@sources.txt
